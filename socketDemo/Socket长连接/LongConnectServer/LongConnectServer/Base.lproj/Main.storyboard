@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A201w" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4ng-cN-LKJ">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Rsv-Yz-ITJ">
+            <objects>
+                <viewController id="4ng-cN-LKJ" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PCc-oA-waq"/>
+                        <viewControllerLayoutGuide type="bottom" id="7EA-f8-kcr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oGx-Fh-Uzu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7ld-dj-SeU">
+                                <rect key="frame" x="30" y="110" width="540" height="140"/>
+                                <color key="backgroundColor" red="0.65490196079999996" green="0.66274509800000003" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EIE-pi-Thf">
+                                <rect key="frame" x="15" y="270" width="495" height="30"/>
+                                <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ZZ-o4-x1Q">
+                                <rect key="frame" x="524" y="270" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.99607843139999996" green="0.60784313729999995" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="发送">
+                                    <color key="titleColor" red="1" green="0.32549019610000002" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendBtnClick:" destination="4ng-cN-LKJ" eventType="touchUpInside" id="vKG-cF-m76"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZt-zE-lab">
+                                <rect key="frame" x="173" y="72" width="74" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="crS-FL-qxp"/>
+                                    <constraint firstAttribute="height" constant="30" id="fJy-xG-eEo"/>
+                                </constraints>
+                                <state key="normal" title="TCP服务器"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="crS-FL-qxp"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="startTCPServer:" destination="4ng-cN-LKJ" eventType="touchUpInside" id="jZS-hM-yXv"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="172.100.108.52" borderStyle="roundedRect" placeholder="ip地址" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GRr-ls-ubf">
+                                <rect key="frame" x="135" y="40" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="5Pz-7N-mjv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="33333" borderStyle="roundedRect" placeholder="端口" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yVP-bn-2fs">
+                                <rect key="frame" x="330" y="40" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="U1t-WT-8yN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="3ZZ-o4-x1Q" secondAttribute="trailing" constant="10" id="6gk-zq-ffD"/>
+                            <constraint firstItem="7ld-dj-SeU" firstAttribute="top" secondItem="PCc-oA-waq" secondAttribute="bottom" constant="90" id="6hb-u3-MD7"/>
+                            <constraint firstItem="yVP-bn-2fs" firstAttribute="leading" secondItem="GRr-ls-ubf" secondAttribute="trailing" constant="20" id="AJu-IY-oHZ"/>
+                            <constraint firstItem="pZt-zE-lab" firstAttribute="centerX" secondItem="GRr-ls-ubf" secondAttribute="centerX" id="Gbq-W8-Yxx"/>
+                            <constraint firstItem="pZt-zE-lab" firstAttribute="top" secondItem="GRr-ls-ubf" secondAttribute="top" id="KSh-ig-xUH"/>
+                            <constraint firstAttribute="trailing" secondItem="7ld-dj-SeU" secondAttribute="trailing" constant="30" id="LZy-Km-I0r"/>
+                            <constraint firstItem="GRr-ls-ubf" firstAttribute="leading" secondItem="oGx-Fh-Uzu" secondAttribute="leading" constant="15" id="MPm-g5-XX0"/>
+                            <constraint firstItem="GRr-ls-ubf" firstAttribute="top" secondItem="PCc-oA-waq" secondAttribute="bottom" constant="20" id="PhM-Gv-6Ns"/>
+                            <constraint firstItem="pZt-zE-lab" firstAttribute="top" secondItem="GRr-ls-ubf" secondAttribute="bottom" constant="2" id="Qpv-Q1-HQg"/>
+                            <constraint firstItem="3ZZ-o4-x1Q" firstAttribute="centerY" secondItem="EIE-pi-Thf" secondAttribute="centerY" id="SBk-ej-BMq"/>
+                            <constraint firstItem="3ZZ-o4-x1Q" firstAttribute="leading" secondItem="EIE-pi-Thf" secondAttribute="trailing" constant="14" id="UfO-Lt-UTR"/>
+                            <constraint firstAttribute="trailing" secondItem="EIE-pi-Thf" secondAttribute="trailing" constant="90" id="VlT-N9-XZ1"/>
+                            <constraint firstItem="yVP-bn-2fs" firstAttribute="centerX" secondItem="oGx-Fh-Uzu" secondAttribute="centerX" constant="90" id="W8e-nG-hwi"/>
+                            <constraint firstItem="EIE-pi-Thf" firstAttribute="leading" secondItem="oGx-Fh-Uzu" secondAttribute="leading" constant="15" id="Yyc-QC-5x7"/>
+                            <constraint firstItem="yVP-bn-2fs" firstAttribute="centerY" secondItem="GRr-ls-ubf" secondAttribute="centerY" id="a4q-Hd-tWU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pZt-zE-lab" secondAttribute="trailing" constant="16" id="aAi-lS-eVz"/>
+                            <constraint firstItem="pZt-zE-lab" firstAttribute="top" secondItem="PCc-oA-waq" secondAttribute="bottom" constant="20" id="sKs-xJ-I9X"/>
+                            <constraint firstItem="GRr-ls-ubf" firstAttribute="centerX" secondItem="oGx-Fh-Uzu" secondAttribute="centerX" constant="-90" id="syw-UW-kBS"/>
+                            <constraint firstItem="7EA-f8-kcr" firstAttribute="top" secondItem="EIE-pi-Thf" secondAttribute="bottom" constant="300" id="tTv-WS-7lT"/>
+                            <constraint firstItem="pZt-zE-lab" firstAttribute="centerX" secondItem="oGx-Fh-Uzu" secondAttribute="centerX" id="udA-Bn-KRN"/>
+                            <constraint firstItem="7ld-dj-SeU" firstAttribute="leading" secondItem="oGx-Fh-Uzu" secondAttribute="leading" constant="30" id="v96-MI-9uP"/>
+                            <constraint firstItem="7EA-f8-kcr" firstAttribute="top" secondItem="7ld-dj-SeU" secondAttribute="bottom" constant="350" id="zfq-xe-GXk"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="MPm-g5-XX0"/>
+                                <exclude reference="sKs-xJ-I9X"/>
+                                <exclude reference="udA-Bn-KRN"/>
+                                <exclude reference="KSh-ig-xUH"/>
+                                <exclude reference="aAi-lS-eVz"/>
+                                <exclude reference="AJu-IY-oHZ"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Kma-pR-ImJ" appends="YES" id="WNL-hm-Yg3"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="addrTF" destination="GRr-ls-ubf" id="yMQ-dC-Jbv"/>
+                        <outlet property="logTV" destination="7ld-dj-SeU" id="XCp-jJ-zkb"/>
+                        <outlet property="msgTF" destination="EIE-pi-Thf" id="ZTl-7U-DqO"/>
+                        <outlet property="portTF" destination="yVP-bn-2fs" id="5Vw-W9-tCB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BgV-PX-NNG" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Kma-pR-ImJ">
+                    <connections>
+                        <action selector="tapToResign:" destination="4ng-cN-LKJ" id="dJx-1W-AkZ"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+</document>

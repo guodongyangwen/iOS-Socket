@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A201w" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5oA-jJ-lLg">
+                                <rect key="frame" x="270" y="506" width="60" height="30"/>
+                                <state key="normal" title="请求图片"/>
+                                <connections>
+                                    <action selector="requestImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tgf-Vo-Cut"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YrG-M2-vFX">
+                                <rect key="frame" x="20" y="50" width="560" height="420"/>
+                                <color key="backgroundColor" red="0.65490196079999996" green="0.66274509800000003" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="YrG-M2-vFX" secondAttribute="height" multiplier="4:3" id="I0B-dE-KEJ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YrG-M2-vFX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="7Mo-oo-Dev"/>
+                            <constraint firstItem="YrG-M2-vFX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="ORj-tt-fOa"/>
+                            <constraint firstAttribute="trailing" secondItem="YrG-M2-vFX" secondAttribute="trailing" constant="20" id="PX8-HH-8xS"/>
+                            <constraint firstItem="5oA-jJ-lLg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RYz-5U-ldM"/>
+                            <constraint firstItem="5oA-jJ-lLg" firstAttribute="top" secondItem="YrG-M2-vFX" secondAttribute="bottom" constant="36" id="vGL-7e-EEY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageV" destination="YrG-M2-vFX" id="Kuc-NJ-Sux"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

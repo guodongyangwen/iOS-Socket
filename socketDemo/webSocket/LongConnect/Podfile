@@ -1,0 +1,7 @@
+platform :ios, "7.0"
+target "LongConnect" do
+
+pod 'SocketRocket'
+
+
+end
